@@ -12,9 +12,11 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, './dist'),
-    compress: true, 
+    watchFiles: ["src/*.html"],
+    hot: true, 
     port: 8080, 
-    open: true
+    open: true,
+    compress: true
   },
   module: {
     rules: [
